@@ -22,7 +22,7 @@ class MyApp extends StatelessWidget {
       builder: DevicePreview.appBuilder,
       title: 'Flutter Demo',
     
-      home: SignIn(),
+      home: LoginPage(),
     );
   }
 }
