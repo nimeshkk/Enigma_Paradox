@@ -1,3 +1,4 @@
+import 'package:enigma_paradox/booking.dart';
 import 'package:enigma_paradox/register.dart';
 import 'package:flutter/material.dart';
 
@@ -10,11 +11,11 @@ import 'components/square_tile.dart';
 class LoginPage extends StatelessWidget {
   LoginPage({super.key});
 
-  // text editing controllers
+  
   final usernameController = TextEditingController();
   final passwordController = TextEditingController();
 
-  // sign user in method
+  
   void signUserIn() {}
 
     void navigateToRegister(BuildContext context) {
@@ -22,7 +23,14 @@ class LoginPage extends StatelessWidget {
       context,
       MaterialPageRoute(builder: (context) => RegisterPage()), 
     );
-  }
+    }
+
+    void navigateToBooking(BuildContext context) {
+    Navigator.push(
+      context,
+      MaterialPageRoute(builder: (context) => Booking()), 
+    );
+    }
 
   @override
   Widget build(BuildContext context) {
@@ -33,7 +41,7 @@ class LoginPage extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              const SizedBox(height: 50),
+              const SizedBox(height: 10),
 
               // logo
               const Icon(
@@ -41,7 +49,7 @@ class LoginPage extends StatelessWidget {
                 size: 100,
               ),
 
-              const SizedBox(height: 50),
+              const SizedBox(height: 10),
 
              
               Text(
@@ -52,7 +60,7 @@ class LoginPage extends StatelessWidget {
                 ),
               ),
 
-              const SizedBox(height: 25),
+              const SizedBox(height: 10),
 
               // username textfield
               MyTextField(
@@ -61,16 +69,16 @@ class LoginPage extends StatelessWidget {
                 obscureText: false,
               ),
 
-              const SizedBox(height: 10),
+              const SizedBox(height: 5),
 
-              // password textfield
+              
               MyTextField(
                 controller: passwordController,
                 hintText: 'Password',
                 obscureText: true,
               ),
 
-              const SizedBox(height: 10),
+              const SizedBox(height: 5),
 
               // forgot password?
               Padding(
@@ -86,16 +94,40 @@ class LoginPage extends StatelessWidget {
                 ),
               ),
 
-              const SizedBox(height: 25),
+              const SizedBox(height: 10),
 
-              // sign in button
+              
               MyButton(
                 onTap: signUserIn,
               ),
+              const SizedBox(height: 10),
+            
+             GestureDetector(
+                onTap: () => navigateToBooking(context),
+           
+              child: Container(
+              padding: const EdgeInsets.all(25),
+              margin: const EdgeInsets.symmetric(horizontal: 25),
+              decoration: BoxDecoration(
+              color: Color.fromARGB(255, 212, 220, 56),
+              borderRadius: BorderRadius.circular(8),
+                  ),
+               child: const Center(
+                 child: Text(
+                  "Use Test Mode",
+                 style: TextStyle(
+                 color: Color.fromARGB(255, 0, 0, 0),
+                 fontWeight: FontWeight.bold,
+                 fontSize: 16,
+                      ),
+                     ),
+                   ),
+                 ),
+                ),
 
-              const SizedBox(height: 50),
+              const SizedBox(height: 25),
 
-              // or continue with
+             
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 25.0),
                 child: Row(
@@ -132,10 +164,6 @@ class LoginPage extends StatelessWidget {
                   // google button
                   SquareTile(imagePath: 'assets/google.png'),
 
-                  // SizedBox(width: 25),
-
-                  // // apple button
-                  // SquareTile(imagePath: 'lib/images/apple.png')
                 ],
               ),
 

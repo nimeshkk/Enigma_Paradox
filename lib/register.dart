@@ -12,7 +12,7 @@ class RegisterPage extends StatelessWidget {
   final passwordController = TextEditingController();
 
   void registerUser() {
-    // Perform user registration logic here
+   
   }
   void navigateToLoginPage(BuildContext context) {
     Navigator.push(
@@ -46,7 +46,7 @@ class RegisterPage extends StatelessWidget {
 
                 SizedBox(height: 25),
 
-                // Username text field
+                
                 MyTextField(
                   controller: usernameController,
                   hintText: 'Username',
@@ -78,6 +78,7 @@ class RegisterPage extends StatelessWidget {
                   onTap: registerUser,
                  
                 ),
+                
 
                 SizedBox(height: 20),
 
