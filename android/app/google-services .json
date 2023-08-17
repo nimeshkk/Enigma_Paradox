@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "47627210537",
+    "project_id": "login-11275",
+    "storage_bucket": "login-11275.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:47627210537:android:674584528286529ff13138",
+        "android_client_info": {
+          "package_name": "com.example.enigma_paradox"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "47627210537-lhpmtq0puq3omu5h2nn7k7ocuuklshfn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBO_7J5SDNrIOAw70y11gU5U9uG3Sh4W3I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "47627210537-lhpmtq0puq3omu5h2nn7k7ocuuklshfn.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

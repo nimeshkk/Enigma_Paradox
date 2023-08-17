@@ -1,3 +1,4 @@
+import 'package:enigma_paradox/register.dart';
 import 'package:flutter/material.dart';
 
 import 'components/my_button.dart';
@@ -15,6 +16,13 @@ class LoginPage extends StatelessWidget {
 
   // sign user in method
   void signUserIn() {}
+
+    void navigateToRegister(BuildContext context) {
+    Navigator.push(
+      context,
+      MaterialPageRoute(builder: (context) => RegisterPage()), 
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -35,7 +43,7 @@ class LoginPage extends StatelessWidget {
 
               const SizedBox(height: 50),
 
-              // welcome back, you've been missed!
+             
               Text(
                 'Enigma Paradox',
                 style: TextStyle(
@@ -117,7 +125,7 @@ class LoginPage extends StatelessWidget {
 
               const SizedBox(height: 50),
 
-              // google + apple sign in buttons
+             
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: const [
@@ -133,7 +141,7 @@ class LoginPage extends StatelessWidget {
 
               const SizedBox(height: 50),
 
-              // not a member? register now
+              
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
@@ -142,11 +150,14 @@ class LoginPage extends StatelessWidget {
                     style: TextStyle(color: Colors.grey[700]),
                   ),
                   const SizedBox(width: 4),
-                  const Text(
-                    'Register now',
-                    style: TextStyle(
-                      color: Colors.blue,
-                      fontWeight: FontWeight.bold,
+                  GestureDetector(
+                    onTap: () => navigateToRegister(context),
+                    child: const Text(
+                      'Register now',
+                      style: TextStyle(
+                        color: Colors.blue,
+                        fontWeight: FontWeight.bold,
+                      ),
                     ),
                   ),
                 ],
