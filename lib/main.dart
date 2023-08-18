@@ -1,5 +1,4 @@
 
-import 'package:enigma_paradox/register.dart';
 import 'package:enigma_paradox/signin.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';

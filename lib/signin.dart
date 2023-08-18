@@ -1,4 +1,5 @@
-import 'package:enigma_paradox/booking.dart';
+
+import 'package:enigma_paradox/bookingHome.dart';
 import 'package:enigma_paradox/register.dart';
 import 'package:flutter/material.dart';
 
@@ -28,7 +29,7 @@ class LoginPage extends StatelessWidget {
     void navigateToBooking(BuildContext context) {
     Navigator.push(
       context,
-      MaterialPageRoute(builder: (context) => Booking()), 
+      MaterialPageRoute(builder: (context) => BookingHome()), 
     );
     }
 
