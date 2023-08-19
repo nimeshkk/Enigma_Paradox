@@ -71,6 +71,13 @@ flutter:
     - assets/space1.jpg
     - assets/space2.jpg
     - assets/space3.jpg
+    - assets/1.png
+    - assets/2.png
+    - assets/3.png
+    - assets/4.png
+    - assets/5.png
+    - assets/6.png
+    
     
 
   # An image asset can refer to one or more resolution-specific "variants", see
