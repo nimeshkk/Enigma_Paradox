@@ -27,7 +27,7 @@ class MyApp extends StatelessWidget {
     primary: Color.fromARGB(217, 255, 234, 0),
     secondary: Color.fromARGB(255, 236, 225, 105),
     onPrimary: Color.fromARGB(255, 255, 255, 255),
-    onPrimaryContainer: Color.fromARGB(255, 255, 255, 255), // Set the primary color to yellow
+    onPrimaryContainer: Color.fromARGB(255, 255, 255, 255), 
   ),
   useMaterial3: true,
 ),
