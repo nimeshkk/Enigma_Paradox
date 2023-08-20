@@ -21,13 +21,13 @@ class _PlanetState extends State<Planet> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Planet'),
+        title: Text('Booking'),
       ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text('Planet'),
+            Text('Book Your Ticket'),
             SizedBox(height: 20),
             ElevatedButton(
               onPressed: _navigateToBookingPage,

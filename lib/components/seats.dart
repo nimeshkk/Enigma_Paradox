@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../booking.dart';
+
 
 class SeatSelectionPage extends StatefulWidget {
   @override
@@ -61,6 +63,10 @@ class _SeatSelectionPageState extends State<SeatSelectionPage> {
           SizedBox(height: 20),
           ElevatedButton(
             onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => BookingPage()), 
+               );
               
             },
             child: Text('Next'),
