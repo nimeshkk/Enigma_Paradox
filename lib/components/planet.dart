@@ -1,13 +1,22 @@
 import 'package:flutter/material.dart';
 
-class Planet extends StatefulWidget {
-  const Planet({super.key});
+import '../booking.dart';
 
+
+class Planet extends StatefulWidget {
   @override
-  State<Planet> createState() => _PlanetState();
+  _PlanetState createState() => _PlanetState();
 }
 
 class _PlanetState extends State<Planet> {
+  // Function to navigate to BookingPage
+  void _navigateToBookingPage() {
+    Navigator.push(
+      context,
+      MaterialPageRoute(builder: (context) => BookingPage()),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -15,7 +24,17 @@ class _PlanetState extends State<Planet> {
         title: Text('Planet'),
       ),
       body: Center(
-        child: Text('Planet'),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text('Planet'),
+            SizedBox(height: 20),
+            ElevatedButton(
+              onPressed: _navigateToBookingPage,
+              child: Text('Book a Flight'),
+            ),
+          ],
+        ),
       ),
     );
   }
